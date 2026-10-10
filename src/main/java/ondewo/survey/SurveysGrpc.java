@@ -387,7 +387,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Create a Survey and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     default void createSurvey(ondewo.survey.SurveyOuterClass.CreateSurveyRequest request,
@@ -397,7 +397,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve a Survey message from the Database and return it
+     * &lt;p&gt;Retrieve a Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     default void getSurvey(ondewo.survey.SurveyOuterClass.GetSurveyRequest request,
@@ -407,7 +407,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an existing Survey message from the Database and return it
+     * &lt;p&gt;Update an existing Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     default void updateSurvey(ondewo.survey.SurveyOuterClass.UpdateSurveyRequest request,
@@ -417,7 +417,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Delete a survey and its associated agent (if existent)
+     * &lt;p&gt;Delete a survey and its associated agent (if existent)&lt;/p&gt;
      * </pre>
      */
     default void deleteSurvey(ondewo.survey.SurveyOuterClass.DeleteSurveyRequest request,
@@ -427,7 +427,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Returns the list of all surveys in the server
+     * &lt;p&gt;Returns the list of all surveys in the server&lt;/p&gt;
      * </pre>
      */
     default void listSurveys(ondewo.survey.SurveyOuterClass.ListSurveysRequest request,
@@ -437,7 +437,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+     * &lt;p&gt;Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p&gt;
      * </pre>
      */
     default void getSurveyAnswers(ondewo.survey.SurveyOuterClass.GetSurveyAnswersRequest request,
@@ -447,7 +447,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+     * &lt;p&gt;Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p&gt;
      * </pre>
      */
     default void getAllSurveyAnswers(ondewo.survey.SurveyOuterClass.GetAllSurveyAnswersRequest request,
@@ -457,7 +457,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Populate and configures an NLU Agent from a Survey
+     * &lt;p&gt;Populate and configures an NLU Agent from a Survey&lt;/p&gt;
      * </pre>
      */
     default void createAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request,
@@ -467,7 +467,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an NLU agent from a survey
+     * &lt;p&gt;Update an NLU agent from a survey&lt;/p&gt;
      * </pre>
      */
     default void updateAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request,
@@ -477,7 +477,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Deletes all data of an NLU agent associated to a survey
+     * &lt;p&gt;Deletes all data of an NLU agent associated to a survey&lt;/p&gt;
      * </pre>
      */
     default void deleteAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request,
@@ -515,7 +515,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Create a Survey and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     public void createSurvey(ondewo.survey.SurveyOuterClass.CreateSurveyRequest request,
@@ -526,7 +526,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve a Survey message from the Database and return it
+     * &lt;p&gt;Retrieve a Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     public void getSurvey(ondewo.survey.SurveyOuterClass.GetSurveyRequest request,
@@ -537,7 +537,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an existing Survey message from the Database and return it
+     * &lt;p&gt;Update an existing Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     public void updateSurvey(ondewo.survey.SurveyOuterClass.UpdateSurveyRequest request,
@@ -548,7 +548,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Delete a survey and its associated agent (if existent)
+     * &lt;p&gt;Delete a survey and its associated agent (if existent)&lt;/p&gt;
      * </pre>
      */
     public void deleteSurvey(ondewo.survey.SurveyOuterClass.DeleteSurveyRequest request,
@@ -559,7 +559,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Returns the list of all surveys in the server
+     * &lt;p&gt;Returns the list of all surveys in the server&lt;/p&gt;
      * </pre>
      */
     public void listSurveys(ondewo.survey.SurveyOuterClass.ListSurveysRequest request,
@@ -570,7 +570,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+     * &lt;p&gt;Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p&gt;
      * </pre>
      */
     public void getSurveyAnswers(ondewo.survey.SurveyOuterClass.GetSurveyAnswersRequest request,
@@ -581,7 +581,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+     * &lt;p&gt;Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p&gt;
      * </pre>
      */
     public void getAllSurveyAnswers(ondewo.survey.SurveyOuterClass.GetAllSurveyAnswersRequest request,
@@ -592,7 +592,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Populate and configures an NLU Agent from a Survey
+     * &lt;p&gt;Populate and configures an NLU Agent from a Survey&lt;/p&gt;
      * </pre>
      */
     public void createAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request,
@@ -603,7 +603,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an NLU agent from a survey
+     * &lt;p&gt;Update an NLU agent from a survey&lt;/p&gt;
      * </pre>
      */
     public void updateAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request,
@@ -614,7 +614,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Deletes all data of an NLU agent associated to a survey
+     * &lt;p&gt;Deletes all data of an NLU agent associated to a survey&lt;/p&gt;
      * </pre>
      */
     public void deleteAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request,
@@ -642,7 +642,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Create a Survey and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.Survey createSurvey(ondewo.survey.SurveyOuterClass.CreateSurveyRequest request) throws io.grpc.StatusException {
@@ -652,7 +652,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve a Survey message from the Database and return it
+     * &lt;p&gt;Retrieve a Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.Survey getSurvey(ondewo.survey.SurveyOuterClass.GetSurveyRequest request) throws io.grpc.StatusException {
@@ -662,7 +662,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an existing Survey message from the Database and return it
+     * &lt;p&gt;Update an existing Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.Survey updateSurvey(ondewo.survey.SurveyOuterClass.UpdateSurveyRequest request) throws io.grpc.StatusException {
@@ -672,7 +672,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Delete a survey and its associated agent (if existent)
+     * &lt;p&gt;Delete a survey and its associated agent (if existent)&lt;/p&gt;
      * </pre>
      */
     public com.google.protobuf.Empty deleteSurvey(ondewo.survey.SurveyOuterClass.DeleteSurveyRequest request) throws io.grpc.StatusException {
@@ -682,7 +682,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Returns the list of all surveys in the server
+     * &lt;p&gt;Returns the list of all surveys in the server&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.ListSurveysResponse listSurveys(ondewo.survey.SurveyOuterClass.ListSurveysRequest request) throws io.grpc.StatusException {
@@ -692,7 +692,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+     * &lt;p&gt;Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.SurveyAnswersResponse getSurveyAnswers(ondewo.survey.SurveyOuterClass.GetSurveyAnswersRequest request) throws io.grpc.StatusException {
@@ -702,7 +702,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+     * &lt;p&gt;Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.SurveyAnswersResponse getAllSurveyAnswers(ondewo.survey.SurveyOuterClass.GetAllSurveyAnswersRequest request) throws io.grpc.StatusException {
@@ -712,7 +712,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Populate and configures an NLU Agent from a Survey
+     * &lt;p&gt;Populate and configures an NLU Agent from a Survey&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.AgentSurveyResponse createAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request) throws io.grpc.StatusException {
@@ -722,7 +722,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an NLU agent from a survey
+     * &lt;p&gt;Update an NLU agent from a survey&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.AgentSurveyResponse updateAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request) throws io.grpc.StatusException {
@@ -732,7 +732,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Deletes all data of an NLU agent associated to a survey
+     * &lt;p&gt;Deletes all data of an NLU agent associated to a survey&lt;/p&gt;
      * </pre>
      */
     public com.google.protobuf.Empty deleteAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request) throws io.grpc.StatusException {
@@ -759,7 +759,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Create a Survey and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.Survey createSurvey(ondewo.survey.SurveyOuterClass.CreateSurveyRequest request) {
@@ -769,7 +769,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve a Survey message from the Database and return it
+     * &lt;p&gt;Retrieve a Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.Survey getSurvey(ondewo.survey.SurveyOuterClass.GetSurveyRequest request) {
@@ -779,7 +779,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an existing Survey message from the Database and return it
+     * &lt;p&gt;Update an existing Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.Survey updateSurvey(ondewo.survey.SurveyOuterClass.UpdateSurveyRequest request) {
@@ -789,7 +789,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Delete a survey and its associated agent (if existent)
+     * &lt;p&gt;Delete a survey and its associated agent (if existent)&lt;/p&gt;
      * </pre>
      */
     public com.google.protobuf.Empty deleteSurvey(ondewo.survey.SurveyOuterClass.DeleteSurveyRequest request) {
@@ -799,7 +799,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Returns the list of all surveys in the server
+     * &lt;p&gt;Returns the list of all surveys in the server&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.ListSurveysResponse listSurveys(ondewo.survey.SurveyOuterClass.ListSurveysRequest request) {
@@ -809,7 +809,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+     * &lt;p&gt;Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.SurveyAnswersResponse getSurveyAnswers(ondewo.survey.SurveyOuterClass.GetSurveyAnswersRequest request) {
@@ -819,7 +819,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+     * &lt;p&gt;Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.SurveyAnswersResponse getAllSurveyAnswers(ondewo.survey.SurveyOuterClass.GetAllSurveyAnswersRequest request) {
@@ -829,7 +829,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Populate and configures an NLU Agent from a Survey
+     * &lt;p&gt;Populate and configures an NLU Agent from a Survey&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.AgentSurveyResponse createAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request) {
@@ -839,7 +839,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an NLU agent from a survey
+     * &lt;p&gt;Update an NLU agent from a survey&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.AgentSurveyResponse updateAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request) {
@@ -849,7 +849,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Deletes all data of an NLU agent associated to a survey
+     * &lt;p&gt;Deletes all data of an NLU agent associated to a survey&lt;/p&gt;
      * </pre>
      */
     public com.google.protobuf.Empty deleteAgentSurvey(ondewo.survey.SurveyOuterClass.AgentSurveyRequest request) {
@@ -876,7 +876,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Create a Survey and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.SurveyOuterClass.Survey> createSurvey(
@@ -887,7 +887,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve a Survey message from the Database and return it
+     * &lt;p&gt;Retrieve a Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.SurveyOuterClass.Survey> getSurvey(
@@ -898,7 +898,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an existing Survey message from the Database and return it
+     * &lt;p&gt;Update an existing Survey message from the Database and return it&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.SurveyOuterClass.Survey> updateSurvey(
@@ -909,7 +909,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Delete a survey and its associated agent (if existent)
+     * &lt;p&gt;Delete a survey and its associated agent (if existent)&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteSurvey(
@@ -920,7 +920,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Returns the list of all surveys in the server
+     * &lt;p&gt;Returns the list of all surveys in the server&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.SurveyOuterClass.ListSurveysResponse> listSurveys(
@@ -931,7 +931,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+     * &lt;p&gt;Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.SurveyOuterClass.SurveyAnswersResponse> getSurveyAnswers(
@@ -942,7 +942,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+     * &lt;p&gt;Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.SurveyOuterClass.SurveyAnswersResponse> getAllSurveyAnswers(
@@ -953,7 +953,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Populate and configures an NLU Agent from a Survey
+     * &lt;p&gt;Populate and configures an NLU Agent from a Survey&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.SurveyOuterClass.AgentSurveyResponse> createAgentSurvey(
@@ -964,7 +964,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Update an NLU agent from a survey
+     * &lt;p&gt;Update an NLU agent from a survey&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.SurveyOuterClass.AgentSurveyResponse> updateAgentSurvey(
@@ -975,7 +975,7 @@ public final class SurveysGrpc {
 
     /**
      * <pre>
-     * Deletes all data of an NLU agent associated to a survey
+     * &lt;p&gt;Deletes all data of an NLU agent associated to a survey&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteAgentSurvey(

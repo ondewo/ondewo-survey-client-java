@@ -170,7 +170,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Create a Survey from FHIR format and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     default void createFHIRSurvey(ondewo.survey.Fhir.CreateFHIRSurveyRequest request,
@@ -180,7 +180,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get Survey Answers on FHIR format
+     * &lt;p&gt;Get Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     default void getFHIRSurveyAnswers(ondewo.survey.SurveyOuterClass.GetSurveyAnswersRequest request,
@@ -190,7 +190,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get all Survey Answers on FHIR format
+     * &lt;p&gt;Get all Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     default void getAllFHIRSurveyAnswers(ondewo.survey.SurveyOuterClass.GetAllSurveyAnswersRequest request,
@@ -228,7 +228,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Create a Survey from FHIR format and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     public void createFHIRSurvey(ondewo.survey.Fhir.CreateFHIRSurveyRequest request,
@@ -239,7 +239,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get Survey Answers on FHIR format
+     * &lt;p&gt;Get Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     public void getFHIRSurveyAnswers(ondewo.survey.SurveyOuterClass.GetSurveyAnswersRequest request,
@@ -250,7 +250,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get all Survey Answers on FHIR format
+     * &lt;p&gt;Get all Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     public void getAllFHIRSurveyAnswers(ondewo.survey.SurveyOuterClass.GetAllSurveyAnswersRequest request,
@@ -278,7 +278,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Create a Survey from FHIR format and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.Survey createFHIRSurvey(ondewo.survey.Fhir.CreateFHIRSurveyRequest request) throws io.grpc.StatusException {
@@ -288,7 +288,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get Survey Answers on FHIR format
+     * &lt;p&gt;Get Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.Fhir.SurveyFHIRAnswersResponse getFHIRSurveyAnswers(ondewo.survey.SurveyOuterClass.GetSurveyAnswersRequest request) throws io.grpc.StatusException {
@@ -298,7 +298,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get all Survey Answers on FHIR format
+     * &lt;p&gt;Get all Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.Fhir.SurveyFHIRAnswersResponse getAllFHIRSurveyAnswers(ondewo.survey.SurveyOuterClass.GetAllSurveyAnswersRequest request) throws io.grpc.StatusException {
@@ -325,7 +325,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Create a Survey from FHIR format and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.SurveyOuterClass.Survey createFHIRSurvey(ondewo.survey.Fhir.CreateFHIRSurveyRequest request) {
@@ -335,7 +335,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get Survey Answers on FHIR format
+     * &lt;p&gt;Get Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.Fhir.SurveyFHIRAnswersResponse getFHIRSurveyAnswers(ondewo.survey.SurveyOuterClass.GetSurveyAnswersRequest request) {
@@ -345,7 +345,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get all Survey Answers on FHIR format
+     * &lt;p&gt;Get all Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     public ondewo.survey.Fhir.SurveyFHIRAnswersResponse getAllFHIRSurveyAnswers(ondewo.survey.SurveyOuterClass.GetAllSurveyAnswersRequest request) {
@@ -372,7 +372,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Create a Survey from FHIR format and an empty NLU Agent for it
+     * &lt;p&gt;Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.SurveyOuterClass.Survey> createFHIRSurvey(
@@ -383,7 +383,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get Survey Answers on FHIR format
+     * &lt;p&gt;Get Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.Fhir.SurveyFHIRAnswersResponse> getFHIRSurveyAnswers(
@@ -394,7 +394,7 @@ public final class FHIRGrpc {
 
     /**
      * <pre>
-     * Get all Survey Answers on FHIR format
+     * &lt;p&gt;Get all Survey Answers on FHIR format&lt;/p&gt;
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ondewo.survey.Fhir.SurveyFHIRAnswersResponse> getAllFHIRSurveyAnswers(

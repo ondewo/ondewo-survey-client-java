@@ -28,12 +28,13 @@ public final class SurveyOuterClass {
   }
   /**
    * <pre>
-   * Enumeration of (some of) the subflows which are created by default
-   * This can be used to "switch off" particular subflows when creating an agent during CreateSurvey
-   * Subflows are defined as one of the following:
-   * - sequences of intents A -&gt; B_1, ..., B_n -&gt; ... -&gt; Z_1, ..., Z_m which are linked by context relationships
-   * such that the first intent in the sequence can always be triggered
-   * - single intents which can always be triggered
+   * &lt;p&gt;Enumeration of (some of) the subflows which are created by default&lt;/p&gt;
+   * &lt;p&gt;This can be used to &amp;quot;switch off&amp;quot; particular subflows when creating an agent during CreateSurvey&lt;/p&gt;
+   * &lt;p&gt;Subflows are defined as one of the following:&lt;/p&gt;
+   * &lt;ul&gt;
+   * &lt;li&gt;sequences of intents A -&amp;gt; B_1, ..., B_n -&amp;gt; ... -&amp;gt; Z_1, ..., Z_m which are linked by context relationships such that the first intent in the sequence can always be triggered&lt;/li&gt;
+   * &lt;li&gt;single intents which can always be triggered&lt;/li&gt;
+   * &lt;/ul&gt;
    * </pre>
    *
    * Protobuf enum {@code ondewo.survey.SubFlow}
@@ -294,7 +295,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * Read-only in the Survey message (assigned by the back-end)
      * </pre>
      *
@@ -305,7 +306,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * Read-only in the Survey message (assigned by the back-end)
      * </pre>
      *
@@ -339,6 +340,7 @@ public final class SurveyOuterClass {
      * <pre>
      * Required. The language of the agent created for the survey.
      * This is also the only supported language of the agent.
+     * ISO 639-1 language code
      * </pre>
      *
      * <code>string language_code = 3;</code>
@@ -349,6 +351,7 @@ public final class SurveyOuterClass {
      * <pre>
      * Required. The language of the agent created for the survey.
      * This is also the only supported language of the agent.
+     * ISO 639-1 language code
      * </pre>
      *
      * <code>string language_code = 3;</code>
@@ -497,6 +500,10 @@ public final class SurveyOuterClass {
     ondewo.survey.SurveyOuterClass.Survey.AgentStatus getStatus();
   }
   /**
+   * <pre>
+   * A survey containing questions and metadata for conducting user surveys
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.Survey}
    */
   public static final class Survey extends
@@ -545,18 +552,34 @@ public final class SurveyOuterClass {
     public enum AgentStatus
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Agent has not been initialized yet
+       * </pre>
+       *
        * <code>TO_BE_INITIALIZED = 0;</code>
        */
       TO_BE_INITIALIZED(0),
       /**
+       * <pre>
+       * Agent has been successfully updated and is current
+       * </pre>
+       *
        * <code>UPDATED = 1;</code>
        */
       UPDATED(1),
       /**
+       * <pre>
+       * Agent is currently being updated
+       * </pre>
+       *
        * <code>UPDATING = 2;</code>
        */
       UPDATING(2),
       /**
+       * <pre>
+       * Agent is outdated and needs to be updated
+       * </pre>
+       *
        * <code>OUTDATED = 3;</code>
        */
       OUTDATED(3),
@@ -573,18 +596,34 @@ public final class SurveyOuterClass {
           AgentStatus.class.getName());
       }
       /**
+       * <pre>
+       * Agent has not been initialized yet
+       * </pre>
+       *
        * <code>TO_BE_INITIALIZED = 0;</code>
        */
       public static final int TO_BE_INITIALIZED_VALUE = 0;
       /**
+       * <pre>
+       * Agent has been successfully updated and is current
+       * </pre>
+       *
        * <code>UPDATED = 1;</code>
        */
       public static final int UPDATED_VALUE = 1;
       /**
+       * <pre>
+       * Agent is currently being updated
+       * </pre>
+       *
        * <code>UPDATING = 2;</code>
        */
       public static final int UPDATING_VALUE = 2;
       /**
+       * <pre>
+       * Agent is outdated and needs to be updated
+       * </pre>
+       *
        * <code>OUTDATED = 3;</code>
        */
       public static final int OUTDATED_VALUE = 3;
@@ -681,7 +720,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * Read-only in the Survey message (assigned by the back-end)
      * </pre>
      *
@@ -704,7 +743,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * Read-only in the Survey message (assigned by the back-end)
      * </pre>
      *
@@ -780,6 +819,7 @@ public final class SurveyOuterClass {
      * <pre>
      * Required. The language of the agent created for the survey.
      * This is also the only supported language of the agent.
+     * ISO 639-1 language code
      * </pre>
      *
      * <code>string language_code = 3;</code>
@@ -802,6 +842,7 @@ public final class SurveyOuterClass {
      * <pre>
      * Required. The language of the agent created for the survey.
      * This is also the only supported language of the agent.
+     * ISO 639-1 language code
      * </pre>
      *
      * <code>string language_code = 3;</code>
@@ -1267,6 +1308,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A survey containing questions and metadata for conducting user surveys
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.Survey}
      */
     public static final class Builder extends
@@ -1569,7 +1614,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * Read-only in the Survey message (assigned by the back-end)
        * </pre>
        *
@@ -1591,7 +1636,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * Read-only in the Survey message (assigned by the back-end)
        * </pre>
        *
@@ -1614,7 +1659,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * Read-only in the Survey message (assigned by the back-end)
        * </pre>
        *
@@ -1633,7 +1678,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * Read-only in the Survey message (assigned by the back-end)
        * </pre>
        *
@@ -1649,7 +1694,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * Read-only in the Survey message (assigned by the back-end)
        * </pre>
        *
@@ -1764,6 +1809,7 @@ public final class SurveyOuterClass {
        * <pre>
        * Required. The language of the agent created for the survey.
        * This is also the only supported language of the agent.
+       * ISO 639-1 language code
        * </pre>
        *
        * <code>string language_code = 3;</code>
@@ -1785,6 +1831,7 @@ public final class SurveyOuterClass {
        * <pre>
        * Required. The language of the agent created for the survey.
        * This is also the only supported language of the agent.
+       * ISO 639-1 language code
        * </pre>
        *
        * <code>string language_code = 3;</code>
@@ -1807,6 +1854,7 @@ public final class SurveyOuterClass {
        * <pre>
        * Required. The language of the agent created for the survey.
        * This is also the only supported language of the agent.
+       * ISO 639-1 language code
        * </pre>
        *
        * <code>string language_code = 3;</code>
@@ -1825,6 +1873,7 @@ public final class SurveyOuterClass {
        * <pre>
        * Required. The language of the agent created for the survey.
        * This is also the only supported language of the agent.
+       * ISO 639-1 language code
        * </pre>
        *
        * <code>string language_code = 3;</code>
@@ -1840,6 +1889,7 @@ public final class SurveyOuterClass {
        * <pre>
        * Required. The language of the agent created for the survey.
        * This is also the only supported language of the agent.
+       * ISO 639-1 language code
        * </pre>
        *
        * <code>string language_code = 3;</code>
@@ -2815,10 +2865,9 @@ public final class SurveyOuterClass {
      * <pre>
      * Required.
      * A pronounceable explanation of the legal implications of participating in the survey.
-     * For example:
-     * "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+     * For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
      * Should be formulated such that the agent can afterwards ask for the consent of the user.
-     * Example for how the agent could continue: "Are you willing to participate in this survey?"
+     * Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
      * </pre>
      *
      * <code>string legal_disclaimer = 9;</code>
@@ -2829,10 +2878,9 @@ public final class SurveyOuterClass {
      * <pre>
      * Required.
      * A pronounceable explanation of the legal implications of participating in the survey.
-     * For example:
-     * "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+     * For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
      * Should be formulated such that the agent can afterwards ask for the consent of the user.
-     * Example for how the agent could continue: "Are you willing to participate in this survey?"
+     * Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
      * </pre>
      *
      * <code>string legal_disclaimer = 9;</code>
@@ -2855,8 +2903,8 @@ public final class SurveyOuterClass {
   }
   /**
    * <pre>
-   * Collect information about the entity behind the survey, the purpose of the survey, legal stuff, etc.
-   * This is needed to generate meaningful messages and training data for some of the auto-generated intents.
+   * &lt;p&gt;Collect information about the entity behind the survey, the purpose of the survey, legal stuff, etc.&lt;/p&gt;
+   * &lt;p&gt;This is needed to generate meaningful messages and training data for some of the auto-generated intents.&lt;/p&gt;
    * </pre>
    *
    * Protobuf type {@code ondewo.survey.SurveyInfo}
@@ -3303,10 +3351,9 @@ public final class SurveyOuterClass {
      * <pre>
      * Required.
      * A pronounceable explanation of the legal implications of participating in the survey.
-     * For example:
-     * "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+     * For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
      * Should be formulated such that the agent can afterwards ask for the consent of the user.
-     * Example for how the agent could continue: "Are you willing to participate in this survey?"
+     * Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
      * </pre>
      *
      * <code>string legal_disclaimer = 9;</code>
@@ -3329,10 +3376,9 @@ public final class SurveyOuterClass {
      * <pre>
      * Required.
      * A pronounceable explanation of the legal implications of participating in the survey.
-     * For example:
-     * "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+     * For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
      * Should be formulated such that the agent can afterwards ask for the consent of the user.
-     * Example for how the agent could continue: "Are you willing to participate in this survey?"
+     * Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
      * </pre>
      *
      * <code>string legal_disclaimer = 9;</code>
@@ -3620,8 +3666,8 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * Collect information about the entity behind the survey, the purpose of the survey, legal stuff, etc.
-     * This is needed to generate meaningful messages and training data for some of the auto-generated intents.
+     * &lt;p&gt;Collect information about the entity behind the survey, the purpose of the survey, legal stuff, etc.&lt;/p&gt;
+     * &lt;p&gt;This is needed to generate meaningful messages and training data for some of the auto-generated intents.&lt;/p&gt;
      * </pre>
      *
      * Protobuf type {@code ondewo.survey.SurveyInfo}
@@ -4666,10 +4712,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Required.
        * A pronounceable explanation of the legal implications of participating in the survey.
-       * For example:
-       * "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+       * For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
        * Should be formulated such that the agent can afterwards ask for the consent of the user.
-       * Example for how the agent could continue: "Are you willing to participate in this survey?"
+       * Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
        * </pre>
        *
        * <code>string legal_disclaimer = 9;</code>
@@ -4691,10 +4736,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Required.
        * A pronounceable explanation of the legal implications of participating in the survey.
-       * For example:
-       * "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+       * For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
        * Should be formulated such that the agent can afterwards ask for the consent of the user.
-       * Example for how the agent could continue: "Are you willing to participate in this survey?"
+       * Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
        * </pre>
        *
        * <code>string legal_disclaimer = 9;</code>
@@ -4717,10 +4761,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Required.
        * A pronounceable explanation of the legal implications of participating in the survey.
-       * For example:
-       * "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+       * For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
        * Should be formulated such that the agent can afterwards ask for the consent of the user.
-       * Example for how the agent could continue: "Are you willing to participate in this survey?"
+       * Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
        * </pre>
        *
        * <code>string legal_disclaimer = 9;</code>
@@ -4739,10 +4782,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Required.
        * A pronounceable explanation of the legal implications of participating in the survey.
-       * For example:
-       * "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+       * For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
        * Should be formulated such that the agent can afterwards ask for the consent of the user.
-       * Example for how the agent could continue: "Are you willing to participate in this survey?"
+       * Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
        * </pre>
        *
        * <code>string legal_disclaimer = 9;</code>
@@ -4758,10 +4800,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Required.
        * A pronounceable explanation of the legal implications of participating in the survey.
-       * For example:
-       * "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+       * For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
        * Should be formulated such that the agent can afterwards ask for the consent of the user.
-       * Example for how the agent could continue: "Are you willing to participate in this survey?"
+       * Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
        * </pre>
        *
        * <code>string legal_disclaimer = 9;</code>
@@ -4884,46 +4925,82 @@ public final class SurveyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * A question to which any kind of reply can be given and recorded
+     * </pre>
+     *
      * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
      * @return Whether the openQuestion field is set.
      */
     boolean hasOpenQuestion();
     /**
+     * <pre>
+     * A question to which any kind of reply can be given and recorded
+     * </pre>
+     *
      * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
      * @return The openQuestion.
      */
     ondewo.survey.SurveyOuterClass.OpenQuestion getOpenQuestion();
     /**
+     * <pre>
+     * A question to which any kind of reply can be given and recorded
+     * </pre>
+     *
      * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
      */
     ondewo.survey.SurveyOuterClass.OpenQuestionOrBuilder getOpenQuestionOrBuilder();
 
     /**
+     * <pre>
+     * A question for which exactly one out of a predefined set of options is expected as answer
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
      * @return Whether the singleChoiceQuestion field is set.
      */
     boolean hasSingleChoiceQuestion();
     /**
+     * <pre>
+     * A question for which exactly one out of a predefined set of options is expected as answer
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
      * @return The singleChoiceQuestion.
      */
     ondewo.survey.SurveyOuterClass.SingleChoiceQuestion getSingleChoiceQuestion();
     /**
+     * <pre>
+     * A question for which exactly one out of a predefined set of options is expected as answer
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
      */
     ondewo.survey.SurveyOuterClass.SingleChoiceQuestionOrBuilder getSingleChoiceQuestionOrBuilder();
 
     /**
+     * <pre>
+     * A question for which exactly one or more out of a predefined set of options are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
      * @return Whether the multipleChoiceQuestion field is set.
      */
     boolean hasMultipleChoiceQuestion();
     /**
+     * <pre>
+     * A question for which exactly one or more out of a predefined set of options are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
      * @return The multipleChoiceQuestion.
      */
     ondewo.survey.SurveyOuterClass.MultipleChoiceQuestion getMultipleChoiceQuestion();
     /**
+     * <pre>
+     * A question for which exactly one or more out of a predefined set of options are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
      */
     ondewo.survey.SurveyOuterClass.MultipleChoiceQuestionOrBuilder getMultipleChoiceQuestionOrBuilder();
@@ -4956,31 +5033,55 @@ public final class SurveyOuterClass {
     ondewo.survey.SurveyOuterClass.ScaleQuestionOrBuilder getScaleQuestionOrBuilder();
 
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
      * @return Whether the singleParameterQuestion field is set.
      */
     boolean hasSingleParameterQuestion();
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
      * @return The singleParameterQuestion.
      */
     ondewo.survey.SurveyOuterClass.SingleParameterQuestion getSingleParameterQuestion();
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
      */
     ondewo.survey.SurveyOuterClass.SingleParameterQuestionOrBuilder getSingleParameterQuestionOrBuilder();
 
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
      * @return Whether the multipleParameterQuestion field is set.
      */
     boolean hasMultipleParameterQuestion();
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
      * @return The multipleParameterQuestion.
      */
     ondewo.survey.SurveyOuterClass.MultipleParameterQuestion getMultipleParameterQuestion();
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
      */
     ondewo.survey.SurveyOuterClass.MultipleParameterQuestionOrBuilder getMultipleParameterQuestionOrBuilder();
@@ -4988,6 +5089,10 @@ public final class SurveyOuterClass {
     ondewo.survey.SurveyOuterClass.Question.QuestionCase getQuestionCase();
   }
   /**
+   * <pre>
+   * A question that can be one of several question types: open-ended, single choice, multiple choice, scale, or parameter-based questions
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.Question}
    */
   public static final class Question extends
@@ -5076,6 +5181,10 @@ public final class SurveyOuterClass {
 
     public static final int OPEN_QUESTION_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * A question to which any kind of reply can be given and recorded
+     * </pre>
+     *
      * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
      * @return Whether the openQuestion field is set.
      */
@@ -5084,6 +5193,10 @@ public final class SurveyOuterClass {
       return questionCase_ == 1;
     }
     /**
+     * <pre>
+     * A question to which any kind of reply can be given and recorded
+     * </pre>
+     *
      * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
      * @return The openQuestion.
      */
@@ -5095,6 +5208,10 @@ public final class SurveyOuterClass {
       return ondewo.survey.SurveyOuterClass.OpenQuestion.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A question to which any kind of reply can be given and recorded
+     * </pre>
+     *
      * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
      */
     @java.lang.Override
@@ -5107,6 +5224,10 @@ public final class SurveyOuterClass {
 
     public static final int SINGLE_CHOICE_QUESTION_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * A question for which exactly one out of a predefined set of options is expected as answer
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
      * @return Whether the singleChoiceQuestion field is set.
      */
@@ -5115,6 +5236,10 @@ public final class SurveyOuterClass {
       return questionCase_ == 2;
     }
     /**
+     * <pre>
+     * A question for which exactly one out of a predefined set of options is expected as answer
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
      * @return The singleChoiceQuestion.
      */
@@ -5126,6 +5251,10 @@ public final class SurveyOuterClass {
       return ondewo.survey.SurveyOuterClass.SingleChoiceQuestion.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A question for which exactly one out of a predefined set of options is expected as answer
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
      */
     @java.lang.Override
@@ -5138,6 +5267,10 @@ public final class SurveyOuterClass {
 
     public static final int MULTIPLE_CHOICE_QUESTION_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * A question for which exactly one or more out of a predefined set of options are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
      * @return Whether the multipleChoiceQuestion field is set.
      */
@@ -5146,6 +5279,10 @@ public final class SurveyOuterClass {
       return questionCase_ == 3;
     }
     /**
+     * <pre>
+     * A question for which exactly one or more out of a predefined set of options are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
      * @return The multipleChoiceQuestion.
      */
@@ -5157,6 +5294,10 @@ public final class SurveyOuterClass {
       return ondewo.survey.SurveyOuterClass.MultipleChoiceQuestion.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A question for which exactly one or more out of a predefined set of options are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
      */
     @java.lang.Override
@@ -5212,6 +5353,10 @@ public final class SurveyOuterClass {
 
     public static final int SINGLE_PARAMETER_QUESTION_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
      * @return Whether the singleParameterQuestion field is set.
      */
@@ -5220,6 +5365,10 @@ public final class SurveyOuterClass {
       return questionCase_ == 5;
     }
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
      * @return The singleParameterQuestion.
      */
@@ -5231,6 +5380,10 @@ public final class SurveyOuterClass {
       return ondewo.survey.SurveyOuterClass.SingleParameterQuestion.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
      */
     @java.lang.Override
@@ -5243,6 +5396,10 @@ public final class SurveyOuterClass {
 
     public static final int MULTIPLE_PARAMETER_QUESTION_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
      * @return Whether the multipleParameterQuestion field is set.
      */
@@ -5251,6 +5408,10 @@ public final class SurveyOuterClass {
       return questionCase_ == 6;
     }
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
      * @return The multipleParameterQuestion.
      */
@@ -5262,6 +5423,10 @@ public final class SurveyOuterClass {
       return ondewo.survey.SurveyOuterClass.MultipleParameterQuestion.getDefaultInstance();
     }
     /**
+     * <pre>
+     * A question for which one or more entities of a particular type are expected as answers
+     * </pre>
+     *
      * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
      */
     @java.lang.Override
@@ -5518,6 +5683,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A question that can be one of several question types: open-ended, single choice, multiple choice, scale, or parameter-based questions
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.Question}
      */
     public static final class Builder extends
@@ -5780,6 +5949,10 @@ public final class SurveyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ondewo.survey.SurveyOuterClass.OpenQuestion, ondewo.survey.SurveyOuterClass.OpenQuestion.Builder, ondewo.survey.SurveyOuterClass.OpenQuestionOrBuilder> openQuestionBuilder_;
       /**
+       * <pre>
+       * A question to which any kind of reply can be given and recorded
+       * </pre>
+       *
        * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
        * @return Whether the openQuestion field is set.
        */
@@ -5788,6 +5961,10 @@ public final class SurveyOuterClass {
         return questionCase_ == 1;
       }
       /**
+       * <pre>
+       * A question to which any kind of reply can be given and recorded
+       * </pre>
+       *
        * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
        * @return The openQuestion.
        */
@@ -5806,6 +5983,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question to which any kind of reply can be given and recorded
+       * </pre>
+       *
        * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
        */
       public Builder setOpenQuestion(ondewo.survey.SurveyOuterClass.OpenQuestion value) {
@@ -5822,6 +6003,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question to which any kind of reply can be given and recorded
+       * </pre>
+       *
        * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
        */
       public Builder setOpenQuestion(
@@ -5836,6 +6021,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question to which any kind of reply can be given and recorded
+       * </pre>
+       *
        * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
        */
       public Builder mergeOpenQuestion(ondewo.survey.SurveyOuterClass.OpenQuestion value) {
@@ -5859,6 +6048,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question to which any kind of reply can be given and recorded
+       * </pre>
+       *
        * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
        */
       public Builder clearOpenQuestion() {
@@ -5878,12 +6071,20 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question to which any kind of reply can be given and recorded
+       * </pre>
+       *
        * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
        */
       public ondewo.survey.SurveyOuterClass.OpenQuestion.Builder getOpenQuestionBuilder() {
         return internalGetOpenQuestionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A question to which any kind of reply can be given and recorded
+       * </pre>
+       *
        * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
        */
       @java.lang.Override
@@ -5898,6 +6099,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question to which any kind of reply can be given and recorded
+       * </pre>
+       *
        * <code>.ondewo.survey.OpenQuestion open_question = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -5922,6 +6127,10 @@ public final class SurveyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ondewo.survey.SurveyOuterClass.SingleChoiceQuestion, ondewo.survey.SurveyOuterClass.SingleChoiceQuestion.Builder, ondewo.survey.SurveyOuterClass.SingleChoiceQuestionOrBuilder> singleChoiceQuestionBuilder_;
       /**
+       * <pre>
+       * A question for which exactly one out of a predefined set of options is expected as answer
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
        * @return Whether the singleChoiceQuestion field is set.
        */
@@ -5930,6 +6139,10 @@ public final class SurveyOuterClass {
         return questionCase_ == 2;
       }
       /**
+       * <pre>
+       * A question for which exactly one out of a predefined set of options is expected as answer
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
        * @return The singleChoiceQuestion.
        */
@@ -5948,6 +6161,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question for which exactly one out of a predefined set of options is expected as answer
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
        */
       public Builder setSingleChoiceQuestion(ondewo.survey.SurveyOuterClass.SingleChoiceQuestion value) {
@@ -5964,6 +6181,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which exactly one out of a predefined set of options is expected as answer
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
        */
       public Builder setSingleChoiceQuestion(
@@ -5978,6 +6199,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which exactly one out of a predefined set of options is expected as answer
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
        */
       public Builder mergeSingleChoiceQuestion(ondewo.survey.SurveyOuterClass.SingleChoiceQuestion value) {
@@ -6001,6 +6226,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which exactly one out of a predefined set of options is expected as answer
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
        */
       public Builder clearSingleChoiceQuestion() {
@@ -6020,12 +6249,20 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which exactly one out of a predefined set of options is expected as answer
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
        */
       public ondewo.survey.SurveyOuterClass.SingleChoiceQuestion.Builder getSingleChoiceQuestionBuilder() {
         return internalGetSingleChoiceQuestionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A question for which exactly one out of a predefined set of options is expected as answer
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
        */
       @java.lang.Override
@@ -6040,6 +6277,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question for which exactly one out of a predefined set of options is expected as answer
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleChoiceQuestion single_choice_question = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -6064,6 +6305,10 @@ public final class SurveyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ondewo.survey.SurveyOuterClass.MultipleChoiceQuestion, ondewo.survey.SurveyOuterClass.MultipleChoiceQuestion.Builder, ondewo.survey.SurveyOuterClass.MultipleChoiceQuestionOrBuilder> multipleChoiceQuestionBuilder_;
       /**
+       * <pre>
+       * A question for which exactly one or more out of a predefined set of options are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
        * @return Whether the multipleChoiceQuestion field is set.
        */
@@ -6072,6 +6317,10 @@ public final class SurveyOuterClass {
         return questionCase_ == 3;
       }
       /**
+       * <pre>
+       * A question for which exactly one or more out of a predefined set of options are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
        * @return The multipleChoiceQuestion.
        */
@@ -6090,6 +6339,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question for which exactly one or more out of a predefined set of options are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
        */
       public Builder setMultipleChoiceQuestion(ondewo.survey.SurveyOuterClass.MultipleChoiceQuestion value) {
@@ -6106,6 +6359,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which exactly one or more out of a predefined set of options are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
        */
       public Builder setMultipleChoiceQuestion(
@@ -6120,6 +6377,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which exactly one or more out of a predefined set of options are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
        */
       public Builder mergeMultipleChoiceQuestion(ondewo.survey.SurveyOuterClass.MultipleChoiceQuestion value) {
@@ -6143,6 +6404,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which exactly one or more out of a predefined set of options are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
        */
       public Builder clearMultipleChoiceQuestion() {
@@ -6162,12 +6427,20 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which exactly one or more out of a predefined set of options are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
        */
       public ondewo.survey.SurveyOuterClass.MultipleChoiceQuestion.Builder getMultipleChoiceQuestionBuilder() {
         return internalGetMultipleChoiceQuestionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A question for which exactly one or more out of a predefined set of options are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
        */
       @java.lang.Override
@@ -6182,6 +6455,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question for which exactly one or more out of a predefined set of options are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleChoiceQuestion multiple_choice_question = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -6384,6 +6661,10 @@ public final class SurveyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ondewo.survey.SurveyOuterClass.SingleParameterQuestion, ondewo.survey.SurveyOuterClass.SingleParameterQuestion.Builder, ondewo.survey.SurveyOuterClass.SingleParameterQuestionOrBuilder> singleParameterQuestionBuilder_;
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
        * @return Whether the singleParameterQuestion field is set.
        */
@@ -6392,6 +6673,10 @@ public final class SurveyOuterClass {
         return questionCase_ == 5;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
        * @return The singleParameterQuestion.
        */
@@ -6410,6 +6695,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
        */
       public Builder setSingleParameterQuestion(ondewo.survey.SurveyOuterClass.SingleParameterQuestion value) {
@@ -6426,6 +6715,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
        */
       public Builder setSingleParameterQuestion(
@@ -6440,6 +6733,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
        */
       public Builder mergeSingleParameterQuestion(ondewo.survey.SurveyOuterClass.SingleParameterQuestion value) {
@@ -6463,6 +6760,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
        */
       public Builder clearSingleParameterQuestion() {
@@ -6482,12 +6783,20 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
        */
       public ondewo.survey.SurveyOuterClass.SingleParameterQuestion.Builder getSingleParameterQuestionBuilder() {
         return internalGetSingleParameterQuestionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
        */
       @java.lang.Override
@@ -6502,6 +6811,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.SingleParameterQuestion single_parameter_question = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -6526,6 +6839,10 @@ public final class SurveyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ondewo.survey.SurveyOuterClass.MultipleParameterQuestion, ondewo.survey.SurveyOuterClass.MultipleParameterQuestion.Builder, ondewo.survey.SurveyOuterClass.MultipleParameterQuestionOrBuilder> multipleParameterQuestionBuilder_;
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
        * @return Whether the multipleParameterQuestion field is set.
        */
@@ -6534,6 +6851,10 @@ public final class SurveyOuterClass {
         return questionCase_ == 6;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
        * @return The multipleParameterQuestion.
        */
@@ -6552,6 +6873,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
        */
       public Builder setMultipleParameterQuestion(ondewo.survey.SurveyOuterClass.MultipleParameterQuestion value) {
@@ -6568,6 +6893,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
        */
       public Builder setMultipleParameterQuestion(
@@ -6582,6 +6911,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
        */
       public Builder mergeMultipleParameterQuestion(ondewo.survey.SurveyOuterClass.MultipleParameterQuestion value) {
@@ -6605,6 +6938,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
        */
       public Builder clearMultipleParameterQuestion() {
@@ -6624,12 +6961,20 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
        */
       public ondewo.survey.SurveyOuterClass.MultipleParameterQuestion.Builder getMultipleParameterQuestionBuilder() {
         return internalGetMultipleParameterQuestionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
        */
       @java.lang.Override
@@ -6644,6 +6989,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * A question for which one or more entities of a particular type are expected as answers
+       * </pre>
+       *
        * <code>.ondewo.survey.MultipleParameterQuestion multiple_parameter_question = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -6742,8 +7091,8 @@ public final class SurveyOuterClass {
   }
   /**
    * <pre>
-   * A question to which any kind of reply can be given and recorded
-   * fixme: not working yet
+   * &lt;p&gt;A question to which any kind of reply can be given and recorded&lt;/p&gt;
+   * &lt;p&gt;fixme: not working yet&lt;/p&gt;
    * </pre>
    *
    * Protobuf type {@code ondewo.survey.OpenQuestion}
@@ -6988,8 +7337,8 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * A question to which any kind of reply can be given and recorded
-     * fixme: not working yet
+     * &lt;p&gt;A question to which any kind of reply can be given and recorded&lt;/p&gt;
+     * &lt;p&gt;fixme: not working yet&lt;/p&gt;
      * </pre>
      *
      * Protobuf type {@code ondewo.survey.OpenQuestion}
@@ -7352,15 +7701,8 @@ public final class SurveyOuterClass {
   }
   /**
    * <pre>
-   * A question for which exactly one out of a predefined set of options is expected as answer
-   * Example: SingleChoiceQuestion(
-   * question_text='Who is your favorite movie hero?',
-   * choices=[
-   * Choice(synonyms=['Bond', 'James Bond']),
-   * Choice(synonyms=['Batman']),
-   * Choice(synonyms=['Superman', 'Clark Kent']),
-   * ]
-   * )
+   * &lt;p&gt;A question for which exactly one out of a predefined set of options is expected as answer&lt;/p&gt;
+   * &lt;p&gt;Example: &lt;code&gt;SingleChoiceQuestion(question_text=&amp;apos;Who is your favorite movie hero?&amp;apos;, choices=[Choice(synonyms=[&amp;apos;Bond&amp;apos;, &amp;apos;James Bond&amp;apos;]), Choice(synonyms=[&amp;apos;Batman&amp;apos;]), Choice(synonyms=[&amp;apos;Superman&amp;apos;, &amp;apos;Clark Kent&amp;apos;])])&lt;/code&gt;&lt;/p&gt;
    * </pre>
    *
    * Protobuf type {@code ondewo.survey.SingleChoiceQuestion}
@@ -7690,15 +8032,8 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * A question for which exactly one out of a predefined set of options is expected as answer
-     * Example: SingleChoiceQuestion(
-     * question_text='Who is your favorite movie hero?',
-     * choices=[
-     * Choice(synonyms=['Bond', 'James Bond']),
-     * Choice(synonyms=['Batman']),
-     * Choice(synonyms=['Superman', 'Clark Kent']),
-     * ]
-     * )
+     * &lt;p&gt;A question for which exactly one out of a predefined set of options is expected as answer&lt;/p&gt;
+     * &lt;p&gt;Example: &lt;code&gt;SingleChoiceQuestion(question_text=&amp;apos;Who is your favorite movie hero?&amp;apos;, choices=[Choice(synonyms=[&amp;apos;Bond&amp;apos;, &amp;apos;James Bond&amp;apos;]), Choice(synonyms=[&amp;apos;Batman&amp;apos;]), Choice(synonyms=[&amp;apos;Superman&amp;apos;, &amp;apos;Clark Kent&amp;apos;])])&lt;/code&gt;&lt;/p&gt;
      * </pre>
      *
      * Protobuf type {@code ondewo.survey.SingleChoiceQuestion}
@@ -8468,15 +8803,8 @@ public final class SurveyOuterClass {
   }
   /**
    * <pre>
-   * A question for which exactly one or more out of a predefined set of options are expected as answers
-   * Example: MultipleChoiceQuestion(
-   * question_text='Which colors do you like?',
-   * choices=[
-   * Choice(synonyms=['red', 'reddisch']),
-   * Choice(synonyms=['blue', 'blueish']),
-   * Choice(synonyms=['yellow']),
-   * ]
-   * )
+   * &lt;p&gt;A question for which exactly one or more out of a predefined set of options are expected as answers&lt;/p&gt;
+   * &lt;p&gt;Example: &lt;code&gt;MultipleChoiceQuestion(question_text=&amp;apos;Which colors do you like?&amp;apos;, choices=[Choice(synonyms=[&amp;apos;red&amp;apos;, &amp;apos;reddisch&amp;apos;]), Choice(synonyms=[&amp;apos;blue&amp;apos;, &amp;apos;blueish&amp;apos;]), Choice(synonyms=[&amp;apos;yellow&amp;apos;])])&lt;/code&gt;&lt;/p&gt;
    * </pre>
    *
    * Protobuf type {@code ondewo.survey.MultipleChoiceQuestion}
@@ -8806,15 +9134,8 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * A question for which exactly one or more out of a predefined set of options are expected as answers
-     * Example: MultipleChoiceQuestion(
-     * question_text='Which colors do you like?',
-     * choices=[
-     * Choice(synonyms=['red', 'reddisch']),
-     * Choice(synonyms=['blue', 'blueish']),
-     * Choice(synonyms=['yellow']),
-     * ]
-     * )
+     * &lt;p&gt;A question for which exactly one or more out of a predefined set of options are expected as answers&lt;/p&gt;
+     * &lt;p&gt;Example: &lt;code&gt;MultipleChoiceQuestion(question_text=&amp;apos;Which colors do you like?&amp;apos;, choices=[Choice(synonyms=[&amp;apos;red&amp;apos;, &amp;apos;reddisch&amp;apos;]), Choice(synonyms=[&amp;apos;blue&amp;apos;, &amp;apos;blueish&amp;apos;]), Choice(synonyms=[&amp;apos;yellow&amp;apos;])])&lt;/code&gt;&lt;/p&gt;
      * </pre>
      *
      * Protobuf type {@code ondewo.survey.MultipleChoiceQuestion}
@@ -9529,31 +9850,55 @@ public final class SurveyOuterClass {
         getQuestionTextBytes();
 
     /**
+     * <pre>
+     * Minimum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
      * @return Whether the minValue field is set.
      */
     boolean hasMinValue();
     /**
+     * <pre>
+     * Minimum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
      * @return The minValue.
      */
     ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue getMinValue();
     /**
+     * <pre>
+     * Minimum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
      */
     ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValueOrBuilder getMinValueOrBuilder();
 
     /**
+     * <pre>
+     * Maximum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
      * @return Whether the maxValue field is set.
      */
     boolean hasMaxValue();
     /**
+     * <pre>
+     * Maximum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
      * @return The maxValue.
      */
     ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue getMaxValue();
     /**
+     * <pre>
+     * Maximum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
      */
     ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValueOrBuilder getMaxValueOrBuilder();
@@ -9605,17 +9950,29 @@ public final class SurveyOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Numeric value for this scale point
+       * </pre>
+       *
        * <code>int32 value = 1;</code>
        * @return The value.
        */
       int getValue();
 
       /**
+       * <pre>
+       * Human-readable label for this scale point
+       * </pre>
+       *
        * <code>string label = 2;</code>
        * @return The label.
        */
       java.lang.String getLabel();
       /**
+       * <pre>
+       * Human-readable label for this scale point
+       * </pre>
+       *
        * <code>string label = 2;</code>
        * @return The bytes for label.
        */
@@ -9623,6 +9980,10 @@ public final class SurveyOuterClass {
           getLabelBytes();
     }
     /**
+     * <pre>
+     * Represents a value and label pair for scale question endpoints
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.ScaleQuestion.ScaleValue}
      */
     public static final class ScaleValue extends
@@ -9663,6 +10024,10 @@ public final class SurveyOuterClass {
       public static final int VALUE_FIELD_NUMBER = 1;
       private int value_ = 0;
       /**
+       * <pre>
+       * Numeric value for this scale point
+       * </pre>
+       *
        * <code>int32 value = 1;</code>
        * @return The value.
        */
@@ -9675,6 +10040,10 @@ public final class SurveyOuterClass {
       @SuppressWarnings("serial")
       private volatile java.lang.Object label_ = "";
       /**
+       * <pre>
+       * Human-readable label for this scale point
+       * </pre>
+       *
        * <code>string label = 2;</code>
        * @return The label.
        */
@@ -9692,6 +10061,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Human-readable label for this scale point
+       * </pre>
+       *
        * <code>string label = 2;</code>
        * @return The bytes for label.
        */
@@ -9878,6 +10251,10 @@ public final class SurveyOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Represents a value and label pair for scale question endpoints
+       * </pre>
+       *
        * Protobuf type {@code ondewo.survey.ScaleQuestion.ScaleValue}
        */
       public static final class Builder extends
@@ -10029,6 +10406,10 @@ public final class SurveyOuterClass {
 
         private int value_ ;
         /**
+         * <pre>
+         * Numeric value for this scale point
+         * </pre>
+         *
          * <code>int32 value = 1;</code>
          * @return The value.
          */
@@ -10037,6 +10418,10 @@ public final class SurveyOuterClass {
           return value_;
         }
         /**
+         * <pre>
+         * Numeric value for this scale point
+         * </pre>
+         *
          * <code>int32 value = 1;</code>
          * @param value The value to set.
          * @return This builder for chaining.
@@ -10049,6 +10434,10 @@ public final class SurveyOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Numeric value for this scale point
+         * </pre>
+         *
          * <code>int32 value = 1;</code>
          * @return This builder for chaining.
          */
@@ -10061,6 +10450,10 @@ public final class SurveyOuterClass {
 
         private java.lang.Object label_ = "";
         /**
+         * <pre>
+         * Human-readable label for this scale point
+         * </pre>
+         *
          * <code>string label = 2;</code>
          * @return The label.
          */
@@ -10077,6 +10470,10 @@ public final class SurveyOuterClass {
           }
         }
         /**
+         * <pre>
+         * Human-readable label for this scale point
+         * </pre>
+         *
          * <code>string label = 2;</code>
          * @return The bytes for label.
          */
@@ -10094,6 +10491,10 @@ public final class SurveyOuterClass {
           }
         }
         /**
+         * <pre>
+         * Human-readable label for this scale point
+         * </pre>
+         *
          * <code>string label = 2;</code>
          * @param value The label to set.
          * @return This builder for chaining.
@@ -10107,6 +10508,10 @@ public final class SurveyOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Human-readable label for this scale point
+         * </pre>
+         *
          * <code>string label = 2;</code>
          * @return This builder for chaining.
          */
@@ -10117,6 +10522,10 @@ public final class SurveyOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Human-readable label for this scale point
+         * </pre>
+         *
          * <code>string label = 2;</code>
          * @param value The bytes for label to set.
          * @return This builder for chaining.
@@ -10233,6 +10642,10 @@ public final class SurveyOuterClass {
     public static final int MIN_VALUE_FIELD_NUMBER = 2;
     private ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue minValue_;
     /**
+     * <pre>
+     * Minimum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
      * @return Whether the minValue field is set.
      */
@@ -10241,6 +10654,10 @@ public final class SurveyOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Minimum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
      * @return The minValue.
      */
@@ -10249,6 +10666,10 @@ public final class SurveyOuterClass {
       return minValue_ == null ? ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue.getDefaultInstance() : minValue_;
     }
     /**
+     * <pre>
+     * Minimum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
      */
     @java.lang.Override
@@ -10259,6 +10680,10 @@ public final class SurveyOuterClass {
     public static final int MAX_VALUE_FIELD_NUMBER = 3;
     private ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue maxValue_;
     /**
+     * <pre>
+     * Maximum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
      * @return Whether the maxValue field is set.
      */
@@ -10267,6 +10692,10 @@ public final class SurveyOuterClass {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * Maximum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
      * @return The maxValue.
      */
@@ -10275,6 +10704,10 @@ public final class SurveyOuterClass {
       return maxValue_ == null ? ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue.getDefaultInstance() : maxValue_;
     }
     /**
+     * <pre>
+     * Maximum value and label for the scale
+     * </pre>
+     *
      * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
      */
     @java.lang.Override
@@ -10759,6 +11192,10 @@ public final class SurveyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue, ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue.Builder, ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValueOrBuilder> minValueBuilder_;
       /**
+       * <pre>
+       * Minimum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
        * @return Whether the minValue field is set.
        */
@@ -10766,6 +11203,10 @@ public final class SurveyOuterClass {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
+       * <pre>
+       * Minimum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
        * @return The minValue.
        */
@@ -10777,6 +11218,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Minimum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
        */
       public Builder setMinValue(ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue value) {
@@ -10793,6 +11238,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Minimum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
        */
       public Builder setMinValue(
@@ -10807,6 +11256,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Minimum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
        */
       public Builder mergeMinValue(ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue value) {
@@ -10828,6 +11281,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Minimum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
        */
       public Builder clearMinValue() {
@@ -10841,6 +11298,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Minimum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
        */
       public ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue.Builder getMinValueBuilder() {
@@ -10849,6 +11310,10 @@ public final class SurveyOuterClass {
         return internalGetMinValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Minimum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
        */
       public ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValueOrBuilder getMinValueOrBuilder() {
@@ -10860,6 +11325,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Minimum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue min_value = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -10880,6 +11349,10 @@ public final class SurveyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue, ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue.Builder, ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValueOrBuilder> maxValueBuilder_;
       /**
+       * <pre>
+       * Maximum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
        * @return Whether the maxValue field is set.
        */
@@ -10887,6 +11360,10 @@ public final class SurveyOuterClass {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
+       * <pre>
+       * Maximum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
        * @return The maxValue.
        */
@@ -10898,6 +11375,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maximum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
        */
       public Builder setMaxValue(ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue value) {
@@ -10914,6 +11395,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
        */
       public Builder setMaxValue(
@@ -10928,6 +11413,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
        */
       public Builder mergeMaxValue(ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue value) {
@@ -10949,6 +11438,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
        */
       public Builder clearMaxValue() {
@@ -10962,6 +11455,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
        */
       public ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValue.Builder getMaxValueBuilder() {
@@ -10970,6 +11467,10 @@ public final class SurveyOuterClass {
         return internalGetMaxValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maximum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
        */
       public ondewo.survey.SurveyOuterClass.ScaleQuestion.ScaleValueOrBuilder getMaxValueOrBuilder() {
@@ -10981,6 +11482,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maximum value and label for the scale
+       * </pre>
+       *
        * <code>.ondewo.survey.ScaleQuestion.ScaleValue max_value = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -11096,8 +11601,8 @@ public final class SurveyOuterClass {
   }
   /**
    * <pre>
-   * SingleParameterQuestion defines a question which prompts the user for one entity of a particular type
-   * Example: SingleParameterQuestion(question_text='How old are you?', parameter_type='sys.number')
+   * &lt;p&gt;SingleParameterQuestion defines a question which prompts the user for one entity of a particular type&lt;/p&gt;
+   * &lt;p&gt;Example: &lt;code&gt;SingleParameterQuestion(question_text=&amp;apos;How old are you?&amp;apos;, parameter_type=&amp;apos;sys.number&amp;apos;)&lt;/code&gt;&lt;/p&gt;
    * </pre>
    *
    * Protobuf type {@code ondewo.survey.SingleParameterQuestion}
@@ -11402,8 +11907,8 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * SingleParameterQuestion defines a question which prompts the user for one entity of a particular type
-     * Example: SingleParameterQuestion(question_text='How old are you?', parameter_type='sys.number')
+     * &lt;p&gt;SingleParameterQuestion defines a question which prompts the user for one entity of a particular type&lt;/p&gt;
+     * &lt;p&gt;Example: &lt;code&gt;SingleParameterQuestion(question_text=&amp;apos;How old are you?&amp;apos;, parameter_type=&amp;apos;sys.number&amp;apos;)&lt;/code&gt;&lt;/p&gt;
      * </pre>
      *
      * Protobuf type {@code ondewo.survey.SingleParameterQuestion}
@@ -11845,8 +12350,8 @@ public final class SurveyOuterClass {
   }
   /**
    * <pre>
-   * MultipleParameterQuestion defines a question which prompts the user for one or several entities of one particular type
-   * Example: MultipleParameterQuestion(question_text='How old are your children?', parameter_type='sys.number')
+   * &lt;p&gt;MultipleParameterQuestion defines a question which prompts the user for one or several entities of one particular type&lt;/p&gt;
+   * &lt;p&gt;Example: &lt;code&gt;MultipleParameterQuestion(question_text=&amp;apos;How old are your children?&amp;apos;, parameter_type=&amp;apos;sys.number&amp;apos;)&lt;/code&gt;&lt;/p&gt;
    * </pre>
    *
    * Protobuf type {@code ondewo.survey.MultipleParameterQuestion}
@@ -12151,8 +12656,8 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * MultipleParameterQuestion defines a question which prompts the user for one or several entities of one particular type
-     * Example: MultipleParameterQuestion(question_text='How old are your children?', parameter_type='sys.number')
+     * &lt;p&gt;MultipleParameterQuestion defines a question which prompts the user for one or several entities of one particular type&lt;/p&gt;
+     * &lt;p&gt;Example: &lt;code&gt;MultipleParameterQuestion(question_text=&amp;apos;How old are your children?&amp;apos;, parameter_type=&amp;apos;sys.number&amp;apos;)&lt;/code&gt;&lt;/p&gt;
      * </pre>
      *
      * Protobuf type {@code ondewo.survey.MultipleParameterQuestion}
@@ -12623,7 +13128,7 @@ public final class SurveyOuterClass {
 
     /**
      * <pre>
-     * The "canonical value" (i.e. the entity value)
+     * The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
      * </pre>
      *
      * <code>string value = 3;</code>
@@ -12632,7 +13137,7 @@ public final class SurveyOuterClass {
     java.lang.String getValue();
     /**
      * <pre>
-     * The "canonical value" (i.e. the entity value)
+     * The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
      * </pre>
      *
      * <code>string value = 3;</code>
@@ -12643,8 +13148,8 @@ public final class SurveyOuterClass {
   }
   /**
    * <pre>
-   * The Choice message defines one "option" for the SingleChoiceQuestion and MultipleChoiceQuestion question types
-   * Example: Choice(synonyms=["blue", "blueish", "pale blue", "deep blue"])
+   * &lt;p&gt;The Choice message defines one &amp;quot;option&amp;quot; for the SingleChoiceQuestion and MultipleChoiceQuestion question types&lt;/p&gt;
+   * &lt;p&gt;Example: &lt;code&gt;Choice(synonyms=[&amp;quot;blue&amp;quot;, &amp;quot;blueish&amp;quot;, &amp;quot;pale blue&amp;quot;, &amp;quot;deep blue&amp;quot;])&lt;/code&gt;&lt;/p&gt;
    * </pre>
    *
    * Protobuf type {@code ondewo.survey.Choice}
@@ -12786,7 +13291,7 @@ public final class SurveyOuterClass {
     private volatile java.lang.Object value_ = "";
     /**
      * <pre>
-     * The "canonical value" (i.e. the entity value)
+     * The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
      * </pre>
      *
      * <code>string value = 3;</code>
@@ -12807,7 +13312,7 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * The "canonical value" (i.e. the entity value)
+     * The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
      * </pre>
      *
      * <code>string value = 3;</code>
@@ -13019,8 +13524,8 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * The Choice message defines one "option" for the SingleChoiceQuestion and MultipleChoiceQuestion question types
-     * Example: Choice(synonyms=["blue", "blueish", "pale blue", "deep blue"])
+     * &lt;p&gt;The Choice message defines one &amp;quot;option&amp;quot; for the SingleChoiceQuestion and MultipleChoiceQuestion question types&lt;/p&gt;
+     * &lt;p&gt;Example: &lt;code&gt;Choice(synonyms=[&amp;quot;blue&amp;quot;, &amp;quot;blueish&amp;quot;, &amp;quot;pale blue&amp;quot;, &amp;quot;deep blue&amp;quot;])&lt;/code&gt;&lt;/p&gt;
      * </pre>
      *
      * Protobuf type {@code ondewo.survey.Choice}
@@ -13527,7 +14032,7 @@ public final class SurveyOuterClass {
       private java.lang.Object value_ = "";
       /**
        * <pre>
-       * The "canonical value" (i.e. the entity value)
+       * The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
        * </pre>
        *
        * <code>string value = 3;</code>
@@ -13547,7 +14052,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The "canonical value" (i.e. the entity value)
+       * The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
        * </pre>
        *
        * <code>string value = 3;</code>
@@ -13568,7 +14073,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The "canonical value" (i.e. the entity value)
+       * The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
        * </pre>
        *
        * <code>string value = 3;</code>
@@ -13585,7 +14090,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The "canonical value" (i.e. the entity value)
+       * The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
        * </pre>
        *
        * <code>string value = 3;</code>
@@ -13599,7 +14104,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The "canonical value" (i.e. the entity value)
+       * The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
        * </pre>
        *
        * <code>string value = 3;</code>
@@ -13764,27 +14269,47 @@ public final class SurveyOuterClass {
         getAnswerParameterOriginalBytes();
 
     /**
+     * <pre>
+     * True if the survey is anonymous, false otherwise
+     * </pre>
+     *
      * <code>bool anonymous = 7;</code>
      * @return Whether the anonymous field is set.
      */
     boolean hasAnonymous();
     /**
+     * <pre>
+     * True if the survey is anonymous, false otherwise
+     * </pre>
+     *
      * <code>bool anonymous = 7;</code>
      * @return The anonymous.
      */
     boolean getAnonymous();
 
     /**
+     * <pre>
+     * User information if the survey is not anonymous
+     * </pre>
+     *
      * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
      * @return Whether the userInformation field is set.
      */
     boolean hasUserInformation();
     /**
+     * <pre>
+     * User information if the survey is not anonymous
+     * </pre>
+     *
      * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
      * @return The userInformation.
      */
     ondewo.survey.SurveyOuterClass.Answer.UserInfo getUserInformation();
     /**
+     * <pre>
+     * User information if the survey is not anonymous
+     * </pre>
+     *
      * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
      */
     ondewo.survey.SurveyOuterClass.Answer.UserInfoOrBuilder getUserInformationOrBuilder();
@@ -13792,6 +14317,10 @@ public final class SurveyOuterClass {
     ondewo.survey.SurveyOuterClass.Answer.IsAnonymousCase getIsAnonymousCase();
   }
   /**
+   * <pre>
+   * An answer to a survey question collected during a session
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.Answer}
    */
   public static final class Answer extends
@@ -13937,6 +14466,10 @@ public final class SurveyOuterClass {
           getUserIdBytes();
     }
     /**
+     * <pre>
+     * User information for non-anonymous surveys
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.Answer.UserInfo}
      */
     public static final class UserInfo extends
@@ -14410,6 +14943,10 @@ public final class SurveyOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * User information for non-anonymous surveys
+       * </pre>
+       *
        * Protobuf type {@code ondewo.survey.Answer.UserInfo}
        */
       public static final class Builder extends
@@ -15363,6 +15900,10 @@ public final class SurveyOuterClass {
 
     public static final int ANONYMOUS_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * True if the survey is anonymous, false otherwise
+     * </pre>
+     *
      * <code>bool anonymous = 7;</code>
      * @return Whether the anonymous field is set.
      */
@@ -15371,6 +15912,10 @@ public final class SurveyOuterClass {
       return isAnonymousCase_ == 7;
     }
     /**
+     * <pre>
+     * True if the survey is anonymous, false otherwise
+     * </pre>
+     *
      * <code>bool anonymous = 7;</code>
      * @return The anonymous.
      */
@@ -15384,6 +15929,10 @@ public final class SurveyOuterClass {
 
     public static final int USER_INFORMATION_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * User information if the survey is not anonymous
+     * </pre>
+     *
      * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
      * @return Whether the userInformation field is set.
      */
@@ -15392,6 +15941,10 @@ public final class SurveyOuterClass {
       return isAnonymousCase_ == 6;
     }
     /**
+     * <pre>
+     * User information if the survey is not anonymous
+     * </pre>
+     *
      * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
      * @return The userInformation.
      */
@@ -15403,6 +15956,10 @@ public final class SurveyOuterClass {
       return ondewo.survey.SurveyOuterClass.Answer.UserInfo.getDefaultInstance();
     }
     /**
+     * <pre>
+     * User information if the survey is not anonymous
+     * </pre>
+     *
      * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
      */
     @java.lang.Override
@@ -15654,6 +16211,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An answer to a survey question collected during a session
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.Answer}
      */
     public static final class Builder extends
@@ -16318,6 +16879,10 @@ public final class SurveyOuterClass {
       }
 
       /**
+       * <pre>
+       * True if the survey is anonymous, false otherwise
+       * </pre>
+       *
        * <code>bool anonymous = 7;</code>
        * @return Whether the anonymous field is set.
        */
@@ -16325,6 +16890,10 @@ public final class SurveyOuterClass {
         return isAnonymousCase_ == 7;
       }
       /**
+       * <pre>
+       * True if the survey is anonymous, false otherwise
+       * </pre>
+       *
        * <code>bool anonymous = 7;</code>
        * @return The anonymous.
        */
@@ -16335,6 +16904,10 @@ public final class SurveyOuterClass {
         return false;
       }
       /**
+       * <pre>
+       * True if the survey is anonymous, false otherwise
+       * </pre>
+       *
        * <code>bool anonymous = 7;</code>
        * @param value The anonymous to set.
        * @return This builder for chaining.
@@ -16347,6 +16920,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * True if the survey is anonymous, false otherwise
+       * </pre>
+       *
        * <code>bool anonymous = 7;</code>
        * @return This builder for chaining.
        */
@@ -16362,6 +16939,10 @@ public final class SurveyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ondewo.survey.SurveyOuterClass.Answer.UserInfo, ondewo.survey.SurveyOuterClass.Answer.UserInfo.Builder, ondewo.survey.SurveyOuterClass.Answer.UserInfoOrBuilder> userInformationBuilder_;
       /**
+       * <pre>
+       * User information if the survey is not anonymous
+       * </pre>
+       *
        * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
        * @return Whether the userInformation field is set.
        */
@@ -16370,6 +16951,10 @@ public final class SurveyOuterClass {
         return isAnonymousCase_ == 6;
       }
       /**
+       * <pre>
+       * User information if the survey is not anonymous
+       * </pre>
+       *
        * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
        * @return The userInformation.
        */
@@ -16388,6 +16973,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * User information if the survey is not anonymous
+       * </pre>
+       *
        * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
        */
       public Builder setUserInformation(ondewo.survey.SurveyOuterClass.Answer.UserInfo value) {
@@ -16404,6 +16993,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User information if the survey is not anonymous
+       * </pre>
+       *
        * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
        */
       public Builder setUserInformation(
@@ -16418,6 +17011,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User information if the survey is not anonymous
+       * </pre>
+       *
        * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
        */
       public Builder mergeUserInformation(ondewo.survey.SurveyOuterClass.Answer.UserInfo value) {
@@ -16441,6 +17038,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User information if the survey is not anonymous
+       * </pre>
+       *
        * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
        */
       public Builder clearUserInformation() {
@@ -16460,12 +17061,20 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * User information if the survey is not anonymous
+       * </pre>
+       *
        * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
        */
       public ondewo.survey.SurveyOuterClass.Answer.UserInfo.Builder getUserInformationBuilder() {
         return internalGetUserInformationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * User information if the survey is not anonymous
+       * </pre>
+       *
        * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
        */
       @java.lang.Override
@@ -16480,6 +17089,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * User information if the survey is not anonymous
+       * </pre>
+       *
        * <code>.ondewo.survey.Answer.UserInfo user_information = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -16557,21 +17170,37 @@ public final class SurveyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The survey to create
+     * </pre>
+     *
      * <code>.ondewo.survey.Survey survey = 1;</code>
      * @return Whether the survey field is set.
      */
     boolean hasSurvey();
     /**
+     * <pre>
+     * The survey to create
+     * </pre>
+     *
      * <code>.ondewo.survey.Survey survey = 1;</code>
      * @return The survey.
      */
     ondewo.survey.SurveyOuterClass.Survey getSurvey();
     /**
+     * <pre>
+     * The survey to create
+     * </pre>
+     *
      * <code>.ondewo.survey.Survey survey = 1;</code>
      */
     ondewo.survey.SurveyOuterClass.SurveyOrBuilder getSurveyOrBuilder();
   }
   /**
+   * <pre>
+   * Request message for creating a new survey
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.CreateSurveyRequest}
    */
   public static final class CreateSurveyRequest extends
@@ -16612,6 +17241,10 @@ public final class SurveyOuterClass {
     public static final int SURVEY_FIELD_NUMBER = 1;
     private ondewo.survey.SurveyOuterClass.Survey survey_;
     /**
+     * <pre>
+     * The survey to create
+     * </pre>
+     *
      * <code>.ondewo.survey.Survey survey = 1;</code>
      * @return Whether the survey field is set.
      */
@@ -16620,6 +17253,10 @@ public final class SurveyOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * The survey to create
+     * </pre>
+     *
      * <code>.ondewo.survey.Survey survey = 1;</code>
      * @return The survey.
      */
@@ -16628,6 +17265,10 @@ public final class SurveyOuterClass {
       return survey_ == null ? ondewo.survey.SurveyOuterClass.Survey.getDefaultInstance() : survey_;
     }
     /**
+     * <pre>
+     * The survey to create
+     * </pre>
+     *
      * <code>.ondewo.survey.Survey survey = 1;</code>
      */
     @java.lang.Override
@@ -16798,6 +17439,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for creating a new survey
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.CreateSurveyRequest}
      */
     public static final class Builder extends
@@ -16954,6 +17599,10 @@ public final class SurveyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ondewo.survey.SurveyOuterClass.Survey, ondewo.survey.SurveyOuterClass.Survey.Builder, ondewo.survey.SurveyOuterClass.SurveyOrBuilder> surveyBuilder_;
       /**
+       * <pre>
+       * The survey to create
+       * </pre>
+       *
        * <code>.ondewo.survey.Survey survey = 1;</code>
        * @return Whether the survey field is set.
        */
@@ -16961,6 +17610,10 @@ public final class SurveyOuterClass {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * The survey to create
+       * </pre>
+       *
        * <code>.ondewo.survey.Survey survey = 1;</code>
        * @return The survey.
        */
@@ -16972,6 +17625,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * The survey to create
+       * </pre>
+       *
        * <code>.ondewo.survey.Survey survey = 1;</code>
        */
       public Builder setSurvey(ondewo.survey.SurveyOuterClass.Survey value) {
@@ -16988,6 +17645,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The survey to create
+       * </pre>
+       *
        * <code>.ondewo.survey.Survey survey = 1;</code>
        */
       public Builder setSurvey(
@@ -17002,6 +17663,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The survey to create
+       * </pre>
+       *
        * <code>.ondewo.survey.Survey survey = 1;</code>
        */
       public Builder mergeSurvey(ondewo.survey.SurveyOuterClass.Survey value) {
@@ -17023,6 +17688,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The survey to create
+       * </pre>
+       *
        * <code>.ondewo.survey.Survey survey = 1;</code>
        */
       public Builder clearSurvey() {
@@ -17036,6 +17705,10 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The survey to create
+       * </pre>
+       *
        * <code>.ondewo.survey.Survey survey = 1;</code>
        */
       public ondewo.survey.SurveyOuterClass.Survey.Builder getSurveyBuilder() {
@@ -17044,6 +17717,10 @@ public final class SurveyOuterClass {
         return internalGetSurveyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The survey to create
+       * </pre>
+       *
        * <code>.ondewo.survey.Survey survey = 1;</code>
        */
       public ondewo.survey.SurveyOuterClass.SurveyOrBuilder getSurveyOrBuilder() {
@@ -17055,6 +17732,10 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * The survey to create
+       * </pre>
+       *
        * <code>.ondewo.survey.Survey survey = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -17129,7 +17810,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -17139,7 +17820,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -17149,6 +17830,10 @@ public final class SurveyOuterClass {
         getSurveyIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving a survey
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.GetSurveyRequest}
    */
   public static final class GetSurveyRequest extends
@@ -17192,7 +17877,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -17214,7 +17899,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -17392,6 +18077,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving a survey
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.GetSurveyRequest}
      */
     public static final class Builder extends
@@ -17533,7 +18222,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -17554,7 +18243,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -17576,7 +18265,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -17594,7 +18283,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -17609,7 +18298,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -17711,8 +18400,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-     * Example:
-     * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+     * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -17722,8 +18410,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-     * Example:
-     * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+     * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -17733,8 +18420,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-     * Example:
-     * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+     * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -17742,6 +18428,10 @@ public final class SurveyOuterClass {
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
   }
   /**
+   * <pre>
+   * Request message for updating an existing survey
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.UpdateSurveyRequest}
    */
   public static final class UpdateSurveyRequest extends
@@ -17822,8 +18512,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-     * Example:
-     * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+     * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -17836,8 +18525,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-     * Example:
-     * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+     * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -17850,8 +18538,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-     * Example:
-     * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+     * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18040,6 +18727,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for updating an existing survey
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.UpdateSurveyRequest}
      */
     public static final class Builder extends
@@ -18377,8 +19068,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-       * Example:
-       * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+       * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18390,8 +19080,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-       * Example:
-       * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+       * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18407,8 +19096,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-       * Example:
-       * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+       * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18429,8 +19117,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-       * Example:
-       * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+       * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18449,8 +19136,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-       * Example:
-       * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+       * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18476,8 +19162,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-       * Example:
-       * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+       * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18495,8 +19180,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-       * Example:
-       * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+       * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18509,8 +19193,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-       * Example:
-       * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+       * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18526,8 +19209,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-       * Example:
-       * - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+       * Example: &lt;code&gt;update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code&gt;
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -18604,7 +19286,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -18614,7 +19296,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -18624,6 +19306,10 @@ public final class SurveyOuterClass {
         getSurveyIdBytes();
   }
   /**
+   * <pre>
+   * Request message for deleting a survey
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.DeleteSurveyRequest}
    */
   public static final class DeleteSurveyRequest extends
@@ -18667,7 +19353,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -18689,7 +19375,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -18867,6 +19553,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for deleting a survey
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.DeleteSurveyRequest}
      */
     public static final class Builder extends
@@ -19008,7 +19698,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -19029,7 +19719,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -19051,7 +19741,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -19069,7 +19759,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -19084,7 +19774,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -19157,11 +19847,21 @@ public final class SurveyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The project identifier for this survey. Equal to the parent of the corresponding Agent.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
+     * </pre>
+     *
      * <code>string survey_id = 1;</code>
      * @return The surveyId.
      */
     java.lang.String getSurveyId();
     /**
+     * <pre>
+     * The project identifier for this survey. Equal to the parent of the corresponding Agent.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
+     * </pre>
+     *
      * <code>string survey_id = 1;</code>
      * @return The bytes for surveyId.
      */
@@ -19258,6 +19958,10 @@ public final class SurveyOuterClass {
     ondewo.survey.SurveyOuterClass.GetSurveyAnswersRequest.IdentifierCase getIdentifierCase();
   }
   /**
+   * <pre>
+   * Request message for retrieving survey answers for a specific session or user
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.GetSurveyAnswersRequest}
    */
   public static final class GetSurveyAnswersRequest extends
@@ -19343,6 +20047,11 @@ public final class SurveyOuterClass {
     @SuppressWarnings("serial")
     private volatile java.lang.Object surveyId_ = "";
     /**
+     * <pre>
+     * The project identifier for this survey. Equal to the parent of the corresponding Agent.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
+     * </pre>
+     *
      * <code>string survey_id = 1;</code>
      * @return The surveyId.
      */
@@ -19360,6 +20069,11 @@ public final class SurveyOuterClass {
       }
     }
     /**
+     * <pre>
+     * The project identifier for this survey. Equal to the parent of the corresponding Agent.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
+     * </pre>
+     *
      * <code>string survey_id = 1;</code>
      * @return The bytes for surveyId.
      */
@@ -19778,6 +20492,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving survey answers for a specific session or user
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.GetSurveyAnswersRequest}
      */
     public static final class Builder extends
@@ -19981,6 +20699,11 @@ public final class SurveyOuterClass {
 
       private java.lang.Object surveyId_ = "";
       /**
+       * <pre>
+       * The project identifier for this survey. Equal to the parent of the corresponding Agent.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
+       * </pre>
+       *
        * <code>string survey_id = 1;</code>
        * @return The surveyId.
        */
@@ -19997,6 +20720,11 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * The project identifier for this survey. Equal to the parent of the corresponding Agent.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
+       * </pre>
+       *
        * <code>string survey_id = 1;</code>
        * @return The bytes for surveyId.
        */
@@ -20014,6 +20742,11 @@ public final class SurveyOuterClass {
         }
       }
       /**
+       * <pre>
+       * The project identifier for this survey. Equal to the parent of the corresponding Agent.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
+       * </pre>
+       *
        * <code>string survey_id = 1;</code>
        * @param value The surveyId to set.
        * @return This builder for chaining.
@@ -20027,6 +20760,11 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The project identifier for this survey. Equal to the parent of the corresponding Agent.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
+       * </pre>
+       *
        * <code>string survey_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -20037,6 +20775,11 @@ public final class SurveyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The project identifier for this survey. Equal to the parent of the corresponding Agent.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
+       * </pre>
+       *
        * <code>string survey_id = 1;</code>
        * @param value The bytes for surveyId to set.
        * @return This builder for chaining.
@@ -20460,7 +21203,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -20470,7 +21213,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -20480,6 +21223,10 @@ public final class SurveyOuterClass {
         getSurveyIdBytes();
   }
   /**
+   * <pre>
+   * Request message for retrieving all survey answers
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.GetAllSurveyAnswersRequest}
    */
   public static final class GetAllSurveyAnswersRequest extends
@@ -20523,7 +21270,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -20545,7 +21292,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -20723,6 +21470,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving all survey answers
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.GetAllSurveyAnswersRequest}
      */
     public static final class Builder extends
@@ -20864,7 +21615,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -20885,7 +21636,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -20907,7 +21658,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -20925,7 +21676,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -20940,7 +21691,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -21015,7 +21766,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -21025,7 +21776,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -21079,6 +21830,10 @@ public final class SurveyOuterClass {
         int index);
   }
   /**
+   * <pre>
+   * Response message containing survey answers
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.SurveyAnswersResponse}
    */
   public static final class SurveyAnswersResponse extends
@@ -21123,7 +21878,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -21145,7 +21900,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -21397,6 +22152,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message containing survey answers
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.SurveyAnswersResponse}
      */
     public static final class Builder extends
@@ -21597,7 +22356,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -21618,7 +22377,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -21640,7 +22399,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -21658,7 +22417,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -21673,7 +22432,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -22061,9 +22820,9 @@ public final class SurveyOuterClass {
      * <pre>
      * Optional. The next_page_token value returned from a previous list request.
      * Example:
-     * "current_index-10--page_size-20"
-     * Start page -&gt; 10
-     * Page size -&gt; 20
+     * &lt;ul&gt;
+     * &lt;li&gt;&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li&gt;
+     * &lt;/ul&gt;
      * </pre>
      *
      * <code>string page_token = 1;</code>
@@ -22074,9 +22833,9 @@ public final class SurveyOuterClass {
      * <pre>
      * Optional. The next_page_token value returned from a previous list request.
      * Example:
-     * "current_index-10--page_size-20"
-     * Start page -&gt; 10
-     * Page size -&gt; 20
+     * &lt;ul&gt;
+     * &lt;li&gt;&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li&gt;
+     * &lt;/ul&gt;
      * </pre>
      *
      * <code>string page_token = 1;</code>
@@ -22086,6 +22845,10 @@ public final class SurveyOuterClass {
         getPageTokenBytes();
   }
   /**
+   * <pre>
+   * Request message for listing surveys with pagination support
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.ListSurveysRequest}
    */
   public static final class ListSurveysRequest extends
@@ -22130,9 +22893,9 @@ public final class SurveyOuterClass {
      * <pre>
      * Optional. The next_page_token value returned from a previous list request.
      * Example:
-     * "current_index-10--page_size-20"
-     * Start page -&gt; 10
-     * Page size -&gt; 20
+     * &lt;ul&gt;
+     * &lt;li&gt;&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li&gt;
+     * &lt;/ul&gt;
      * </pre>
      *
      * <code>string page_token = 1;</code>
@@ -22155,9 +22918,9 @@ public final class SurveyOuterClass {
      * <pre>
      * Optional. The next_page_token value returned from a previous list request.
      * Example:
-     * "current_index-10--page_size-20"
-     * Start page -&gt; 10
-     * Page size -&gt; 20
+     * &lt;ul&gt;
+     * &lt;li&gt;&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li&gt;
+     * &lt;/ul&gt;
      * </pre>
      *
      * <code>string page_token = 1;</code>
@@ -22335,6 +23098,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for listing surveys with pagination support
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.ListSurveysRequest}
      */
     public static final class Builder extends
@@ -22477,9 +23244,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Optional. The next_page_token value returned from a previous list request.
        * Example:
-       * "current_index-10--page_size-20"
-       * Start page -&gt; 10
-       * Page size -&gt; 20
+       * &lt;ul&gt;
+       * &lt;li&gt;&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li&gt;
+       * &lt;/ul&gt;
        * </pre>
        *
        * <code>string page_token = 1;</code>
@@ -22501,9 +23268,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Optional. The next_page_token value returned from a previous list request.
        * Example:
-       * "current_index-10--page_size-20"
-       * Start page -&gt; 10
-       * Page size -&gt; 20
+       * &lt;ul&gt;
+       * &lt;li&gt;&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li&gt;
+       * &lt;/ul&gt;
        * </pre>
        *
        * <code>string page_token = 1;</code>
@@ -22526,9 +23293,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Optional. The next_page_token value returned from a previous list request.
        * Example:
-       * "current_index-10--page_size-20"
-       * Start page -&gt; 10
-       * Page size -&gt; 20
+       * &lt;ul&gt;
+       * &lt;li&gt;&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li&gt;
+       * &lt;/ul&gt;
        * </pre>
        *
        * <code>string page_token = 1;</code>
@@ -22547,9 +23314,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Optional. The next_page_token value returned from a previous list request.
        * Example:
-       * "current_index-10--page_size-20"
-       * Start page -&gt; 10
-       * Page size -&gt; 20
+       * &lt;ul&gt;
+       * &lt;li&gt;&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li&gt;
+       * &lt;/ul&gt;
        * </pre>
        *
        * <code>string page_token = 1;</code>
@@ -22565,9 +23332,9 @@ public final class SurveyOuterClass {
        * <pre>
        * Optional. The next_page_token value returned from a previous list request.
        * Example:
-       * "current_index-10--page_size-20"
-       * Start page -&gt; 10
-       * Page size -&gt; 20
+       * &lt;ul&gt;
+       * &lt;li&gt;&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li&gt;
+       * &lt;/ul&gt;
        * </pre>
        *
        * <code>string page_token = 1;</code>
@@ -22641,8 +23408,7 @@ public final class SurveyOuterClass {
 
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22651,8 +23417,7 @@ public final class SurveyOuterClass {
         getSurveysList();
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22660,8 +23425,7 @@ public final class SurveyOuterClass {
     ondewo.survey.SurveyOuterClass.Survey getSurveys(int index);
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22669,8 +23433,7 @@ public final class SurveyOuterClass {
     int getSurveysCount();
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22679,8 +23442,7 @@ public final class SurveyOuterClass {
         getSurveysOrBuilderList();
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22690,8 +23452,7 @@ public final class SurveyOuterClass {
 
     /**
      * <pre>
-     * Token to retrieve the next page of results, or empty if there are no
-     * more results in the list.
+     * Token to retrieve the next page of results, or empty if there are no more results in the list.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22700,8 +23461,7 @@ public final class SurveyOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * Token to retrieve the next page of results, or empty if there are no
-     * more results in the list.
+     * Token to retrieve the next page of results, or empty if there are no more results in the list.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22712,7 +23472,7 @@ public final class SurveyOuterClass {
   }
   /**
    * <pre>
-   * The response message for [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
+   * &lt;p&gt;The response message for &lt;a href="index.html#google.cloud.dialogflow.v2.Intents.ListIntents"&gt;Intents.ListIntents&lt;/a&gt;.&lt;/p&gt;
    * </pre>
    *
    * Protobuf type {@code ondewo.survey.ListSurveysResponse}
@@ -22758,8 +23518,7 @@ public final class SurveyOuterClass {
     private java.util.List<ondewo.survey.SurveyOuterClass.Survey> surveys_;
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22770,8 +23529,7 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22783,8 +23541,7 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22795,8 +23552,7 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22807,8 +23563,7 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * The list of surveys. There will be a maximum number of items
-     * returned based on the page_token field in the request.
+     * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
      * </pre>
      *
      * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -22824,8 +23579,7 @@ public final class SurveyOuterClass {
     private volatile java.lang.Object nextPageToken_ = "";
     /**
      * <pre>
-     * Token to retrieve the next page of results, or empty if there are no
-     * more results in the list.
+     * Token to retrieve the next page of results, or empty if there are no more results in the list.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -22846,8 +23600,7 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * Token to retrieve the next page of results, or empty if there are no
-     * more results in the list.
+     * Token to retrieve the next page of results, or empty if there are no more results in the list.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -23039,7 +23792,7 @@ public final class SurveyOuterClass {
     }
     /**
      * <pre>
-     * The response message for [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
+     * &lt;p&gt;The response message for &lt;a href="index.html#google.cloud.dialogflow.v2.Intents.ListIntents"&gt;Intents.ListIntents&lt;/a&gt;.&lt;/p&gt;
      * </pre>
      *
      * Protobuf type {@code ondewo.survey.ListSurveysResponse}
@@ -23252,8 +24005,7 @@ public final class SurveyOuterClass {
 
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23267,8 +24019,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23282,8 +24033,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23297,8 +24047,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23319,8 +24068,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23338,8 +24086,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23359,8 +24106,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23381,8 +24127,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23400,8 +24145,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23419,8 +24163,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23439,8 +24182,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23457,8 +24199,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23475,8 +24216,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23487,8 +24227,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23502,8 +24241,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23518,8 +24256,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23530,8 +24267,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23543,8 +24279,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * The list of surveys. There will be a maximum number of items
-       * returned based on the page_token field in the request.
+       * The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
        * </pre>
        *
        * <code>repeated .ondewo.survey.Survey surveys = 1;</code>
@@ -23571,8 +24306,7 @@ public final class SurveyOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * Token to retrieve the next page of results, or empty if there are no
-       * more results in the list.
+       * Token to retrieve the next page of results, or empty if there are no more results in the list.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23592,8 +24326,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * Token to retrieve the next page of results, or empty if there are no
-       * more results in the list.
+       * Token to retrieve the next page of results, or empty if there are no more results in the list.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23614,8 +24347,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * Token to retrieve the next page of results, or empty if there are no
-       * more results in the list.
+       * Token to retrieve the next page of results, or empty if there are no more results in the list.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23632,8 +24364,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * Token to retrieve the next page of results, or empty if there are no
-       * more results in the list.
+       * Token to retrieve the next page of results, or empty if there are no more results in the list.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23647,8 +24378,7 @@ public final class SurveyOuterClass {
       }
       /**
        * <pre>
-       * Token to retrieve the next page of results, or empty if there are no
-       * more results in the list.
+       * Token to retrieve the next page of results, or empty if there are no more results in the list.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -23723,7 +24453,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -23733,7 +24463,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -23743,6 +24473,10 @@ public final class SurveyOuterClass {
         getSurveyIdBytes();
   }
   /**
+   * <pre>
+   * Request message for agent-related survey operations
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.AgentSurveyRequest}
    */
   public static final class AgentSurveyRequest extends
@@ -23786,7 +24520,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -23808,7 +24542,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -23986,6 +24720,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for agent-related survey operations
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.AgentSurveyRequest}
      */
     public static final class Builder extends
@@ -24127,7 +24865,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -24148,7 +24886,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -24170,7 +24908,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -24188,7 +24926,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -24203,7 +24941,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -24278,7 +25016,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The parent of an agent. Equal to the survey ID.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string parent = 1;</code>
@@ -24288,7 +25026,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The parent of an agent. Equal to the survey ID.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string parent = 1;</code>
@@ -24298,6 +25036,10 @@ public final class SurveyOuterClass {
         getParentBytes();
   }
   /**
+   * <pre>
+   * Response message for agent-related survey operations
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.AgentSurveyResponse}
    */
   public static final class AgentSurveyResponse extends
@@ -24341,7 +25083,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The parent of an agent. Equal to the survey ID.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string parent = 1;</code>
@@ -24363,7 +25105,7 @@ public final class SurveyOuterClass {
     /**
      * <pre>
      * The parent of an agent. Equal to the survey ID.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string parent = 1;</code>
@@ -24541,6 +25283,10 @@ public final class SurveyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message for agent-related survey operations
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.AgentSurveyResponse}
      */
     public static final class Builder extends
@@ -24682,7 +25428,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The parent of an agent. Equal to the survey ID.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string parent = 1;</code>
@@ -24703,7 +25449,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The parent of an agent. Equal to the survey ID.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string parent = 1;</code>
@@ -24725,7 +25471,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The parent of an agent. Equal to the survey ID.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string parent = 1;</code>
@@ -24743,7 +25489,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The parent of an agent. Equal to the survey ID.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string parent = 1;</code>
@@ -24758,7 +25504,7 @@ public final class SurveyOuterClass {
       /**
        * <pre>
        * The parent of an agent. Equal to the survey ID.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string parent = 1;</code>
