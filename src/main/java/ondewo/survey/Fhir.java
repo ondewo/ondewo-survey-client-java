@@ -58,6 +58,10 @@ public final class Fhir {
     com.google.protobuf.StructOrBuilder getFhirQuestionnaireOrBuilder();
   }
   /**
+   * <pre>
+   * Request message for creating a survey from FHIR format
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.CreateFHIRSurveyRequest}
    */
   public static final class CreateFHIRSurveyRequest extends
@@ -296,6 +300,10 @@ public final class Fhir {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for creating a survey from FHIR format
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.CreateFHIRSurveyRequest}
      */
     public static final class Builder extends
@@ -663,7 +671,7 @@ public final class Fhir {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -673,7 +681,7 @@ public final class Fhir {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -727,6 +735,10 @@ public final class Fhir {
         int index);
   }
   /**
+   * <pre>
+   * Response message containing survey answers in FHIR format
+   * </pre>
+   *
    * Protobuf type {@code ondewo.survey.SurveyFHIRAnswersResponse}
    */
   public static final class SurveyFHIRAnswersResponse extends
@@ -771,7 +783,7 @@ public final class Fhir {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -793,7 +805,7 @@ public final class Fhir {
     /**
      * <pre>
      * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-     * Format: `projects/&lt;Project ID&gt;/agent`.
+     * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
      * </pre>
      *
      * <code>string survey_id = 1;</code>
@@ -1045,6 +1057,10 @@ public final class Fhir {
       return builder;
     }
     /**
+     * <pre>
+     * Response message containing survey answers in FHIR format
+     * </pre>
+     *
      * Protobuf type {@code ondewo.survey.SurveyFHIRAnswersResponse}
      */
     public static final class Builder extends
@@ -1245,7 +1261,7 @@ public final class Fhir {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -1266,7 +1282,7 @@ public final class Fhir {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -1288,7 +1304,7 @@ public final class Fhir {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -1306,7 +1322,7 @@ public final class Fhir {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
@@ -1321,7 +1337,7 @@ public final class Fhir {
       /**
        * <pre>
        * The project identifier for this survey. Equal to the parent of the corresponding Agent.
-       * Format: `projects/&lt;Project ID&gt;/agent`.
+       * Format: &lt;pre&gt;&lt;code&gt;projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code&gt;&lt;/pre&gt;
        * </pre>
        *
        * <code>string survey_id = 1;</code>
