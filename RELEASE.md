@@ -2,6 +2,15 @@
 
 *****************
 
+## Release ONDEWO SURVEY Java Client 2.1.0
+
+### Improvements
+
+* Tracking API Version [2.1.0](https://github.com/ondewo/ondewo-survey-api/releases/tag/2.1.0) ( [Documentation](https://ondewo.github.io/ondewo-survey-api/) )
+* Generated with ondewo-proto-compiler 5.17.0 (protoc 35.1). New runtime floors: protobuf-java 4.35.1, grpc-java 1.85.1 and proto-google-common-protos 2.82.0.
+
+*****************
+
 ## Release ONDEWO SURVEY Java Client 2.0.1
 
 ### New Features

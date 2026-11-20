@@ -42,13 +42,13 @@ export
 
 # MUST BE THE SAME AS THE API in Major and Minor Version Number
 # example: API 2.9.0 --> Client 2.9.X
-ONDEWO_SURVEY_VERSION=2.0.1
+ONDEWO_SURVEY_VERSION=2.1.0
 
 # Submodule pins. Both are checked out by `make checkout_defined_submodule_versions`, which
 # every `make build` runs first, so a build can never silently use whatever the submodule
 # happened to be left at.
-ONDEWO_SURVEY_API_GIT_BRANCH=tags/2.0.1
-ONDEWO_PROTO_COMPILER_GIT_BRANCH=tags/5.16.0
+ONDEWO_SURVEY_API_GIT_BRANCH=tags/2.1.0
+ONDEWO_PROTO_COMPILER_GIT_BRANCH=tags/5.17.0
 
 # From ondewo-devops-accounts/account_github.env at release time (see run_release_with_devops). It
 # must be allowed to push to this repository, which check_gh_token_valid proves before the first push.
